@@ -39,7 +39,7 @@ laurea (286)
 
 6 - Selezionare tutti i corsi di laurea magistrale (38)
 
-            SELECT `department_id` AS dipartimento, `name` AS nome, `level` AS topologia_di_laurea
+            SELECT `department_id` AS dipartimento, `name` AS nome, `level` AS tipologia_di_laurea
             FROM `degrees` 
             WHERE `level` = 'magistrale';
 
@@ -52,6 +52,6 @@ laurea (286)
 
 8 - Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-            SELECT `name` as nome, `surname` AS cognome
+            SELECT COUNT(`id`) AS insegnanti_senza_numero_di_telefono
             FROM `teachers` 
             WHERE `phone` IS null;
