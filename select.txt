@@ -83,6 +83,14 @@ laurea (286)
             WHERE (`phone` LIKE '%927') OR (`phone` LIKE '%279%');
 
 
-Quanti studenti hanno sostenuto l’esame con id=1?
-Quali esami sono stati sostenuti il 2020-09-04 e il 2020-02-07 tra le 14.00 e le 18.00 ?
-Quali dipartimenti rispondono telefonicamente dall’Italia?
+13 - Quanti studenti hanno sostenuto l’esame con id=1?
+
+
+14 - Quali esami sono stati sostenuti il 2020-09-04 e il 2020-02-07 tra le 14.00 e le 18.00 ?
+
+
+15 - Quali dipartimenti rispondono telefonicamente dall’Italia?
+
+            SELECT `name` AS nome_dipartimento
+            FROM `departments`
+            WHERE `phone` LIKE '%39%';
