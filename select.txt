@@ -55,3 +55,34 @@ laurea (286)
             SELECT COUNT(`id`) AS insegnanti_senza_numero_di_telefono
             FROM `teachers` 
             WHERE `phone` IS null;
+
+9 - Seleziona gli studenti che si chiamano “Rocco” o “Marina”
+
+            SELECT `name` AS nome, `surname` AS cognome, `registration_number` AS numero_di_registrazione
+            FROM `students`
+            WHERE (`name` = 'Rocco') OR (`name` = 'Marina');
+
+
+10 - Seleziona gli studenti che hanno una mail di Gmail
+
+            SELECT `name`AS nome, `surname` AS cognome, `email`
+            FROM `students` 
+            WHERE `email` LIKE '%gmail%';
+
+
+11 - Seleziona gli studenti il cui cognome termina in “ini”
+
+            SELECT `name`AS nome, `surname` AS cognome, `registration_number`
+            FROM `students` 
+            WHERE `surname` LIKE '%ini';
+
+12 - Quanti insegnanti hanno un telefono che finisce in 927 o contiene 279?
+
+            SELECT COUNT(`id`)
+            FROM `teachers` 
+            WHERE (`phone` LIKE '%927') OR (`phone` LIKE '%279%');
+
+
+Quanti studenti hanno sostenuto l’esame con id=1?
+Quali esami sono stati sostenuti il 2020-09-04 e il 2020-02-07 tra le 14.00 e le 18.00 ?
+Quali dipartimenti rispondono telefonicamente dall’Italia?
